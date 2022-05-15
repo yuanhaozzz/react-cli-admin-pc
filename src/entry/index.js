@@ -1,6 +1,16 @@
 import ReactDOM from "react-dom";
-import React from "react";
+import React, { Fragment } from "react";
 
-import Entry from "@/router";
+import Routers from "@/router";
+import Loading from "src/components/Loading";
 
-ReactDOM.render(<Entry />, document.getElementById("root"));
+function App() {
+  return (
+    <Fragment>
+      <Loading />
+      <Routers />
+    </Fragment>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

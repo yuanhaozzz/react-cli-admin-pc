@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 import { Layout, Menu, Breadcrumb, Dropdown, Button } from "antd";
-import "./style.scss";
-
 import Router from "../Router";
+
+import Loading from "src/components/Loading";
 
 const { Content } = Layout;
 

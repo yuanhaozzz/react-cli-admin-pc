@@ -9,6 +9,7 @@ $loadingBackground: #00d8c9;
     height: 100%;
     background-color: rgba(255, 255, 255, .7);
     display: none;
+    z-index: 99;
     .loading {
         display: block;
         position: absolute;
