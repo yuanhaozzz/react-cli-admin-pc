@@ -4,7 +4,7 @@ import { lazy } from "react";
 const home = [
   {
     name: "首页",
-    path: "/",
+    path: "/home",
     exact: true,
     component: lazy(() => import("@/pages/Home")),
   },

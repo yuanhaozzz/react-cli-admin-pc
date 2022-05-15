@@ -3,7 +3,10 @@ import React, { Component, Suspense } from "react";
 
 import { Provider } from "react-redux";
 import Store from "@/store";
-import RouteGuard from "./RouteGuard";
+import Login from "src/commonPages/Login";
+import Layout from "src/commonPages/layout";
+
+import "@/assets/css/base.scss";
 
 class Entry extends Component {
   render() {
@@ -12,7 +15,8 @@ class Entry extends Component {
         <BrowserRouter>
           <Suspense fallback={<div>{/* loading */}</div>}>
             <Switch>
-              <Route path="*" render={(props) => <RouteGuard {...props} />} />
+              <Route path="/login" render={(props) => <Login {...props} />} />
+              <Route path="*" render={(props) => <Layout {...props} />} />
             </Switch>
           </Suspense>
         </BrowserRouter>

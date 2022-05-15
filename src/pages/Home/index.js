@@ -1,9 +1,15 @@
-import React, { Component } from "react";
+import React, {
+  Component,
+  useEffect,
+  useState,
+  memo,
+  useMemo,
+  useCallback,
+} from "react";
 import { connect } from "react-redux";
 
 import { getList } from "./api";
 // import { toast } from "@/utils/message";
-import { DatePicker, Space } from "antd";
 
 import "./style.scss";
 
@@ -35,14 +41,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home-wrapper">
-        <Space direction="vertical">
-          <DatePicker />
-          <DatePicker picker="week" />
-          <DatePicker picker="month" />
-          <DatePicker picker="quarter" />
-          <DatePicker picker="year" />
-        </Space>
-        <h2>欢迎来到浩哥基础模版</h2>
+        <h2>欢迎来到浩哥后台管理系统home页面</h2>
         <div className="home-content flex-center">
           <p>{this.props.count}</p>
           <button
@@ -53,12 +52,6 @@ class Home extends Component {
             增加
           </button>
         </div>
-        <button
-          className="home-jump-to"
-          onClick={() => this.props.history.push("/test")}
-        >
-          跳转/test
-        </button>
       </div>
     );
   }

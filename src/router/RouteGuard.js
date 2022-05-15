@@ -5,8 +5,6 @@ import NotFount from "@/pages/NotFount";
 
 import Loading from "@/components/Loading";
 
-import "@/assets/css/base.scss";
-
 class RouteGuard extends Component {
   constructor(props) {
     super(props);

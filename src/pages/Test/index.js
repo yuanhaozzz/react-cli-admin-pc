@@ -12,7 +12,7 @@ class Test extends Component {
   render() {
     return (
       <div className="test-wrapper">
-        <h2>欢迎来到浩哥基础模版</h2>
+        <h2>欢迎来到浩哥后台管理系统test页面</h2>
         <div className="home-content flex-center">
           <p>{this.props.count}</p>
           <button
@@ -23,12 +23,6 @@ class Test extends Component {
             增加
           </button>
         </div>
-        <button
-          onClick={() => this.props.history.push("/")}
-          className="test-jump-to"
-        >
-          跳转/
-        </button>
       </div>
     );
   }
