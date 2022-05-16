@@ -191,10 +191,10 @@ module.exports = function (webpackEnv) {
           ((info) =>
             path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")),
     },
-    // externals: {
-    //   react: "React",
-    //   "react-dom": "ReactDOM",
-    // },
+    externals: {
+      react: "React",
+      "react-dom": "ReactDOM",
+    },
     cache: {
       type: "filesystem",
       version: createEnvironmentHash(env.raw),
@@ -442,6 +442,22 @@ module.exports = function (webpackEnv) {
           {
             inject: true,
             template: paths.appHtml,
+            // externals: [
+            //   {
+            //     module: "react",
+            //     global: "React",
+            //     entry: {
+            //       path: "https://unpkg.com/react@17/umd/react.production.min.js",
+            //     },
+            //   },
+            //   {
+            //     module: "react-dom",
+            //     global: "ReactDOM",
+            //     entry: {
+            //       path: "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+            //     },
+            //   },
+            // ],
           },
           isEnvProduction
             ? {

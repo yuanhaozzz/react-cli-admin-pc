@@ -59,9 +59,9 @@ function Login(props) {
       <div className="login-top"></div>
       <div className="login-container">
         {/* icon */}
-        <img src={LoginHead} className="login-head-image" />
-        <img src={LoginHand} className="login-hand-image left" />
-        <img src={LoginHand} className="login-hand-image right" />
+        <img src={LoginHead} className="login-head-image" alt="" />
+        <img src={LoginHand} className="login-hand-image left" alt="" />
+        <img src={LoginHand} className="login-hand-image right" alt="" />
         {renderForm()}
       </div>
     </div>
